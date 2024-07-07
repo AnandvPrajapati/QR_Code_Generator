@@ -7,8 +7,8 @@ To run the provided code using ES modules, you can follow these steps:
 ### 1. Ensure Your Environment Supports ES Modules
 First, ensure your Node.js environment supports ES modules by setting up your project correctly.
 
-### 2. Set Up Your Project
-1. **Initialize your project** (if you haven't already):
+### 2. Set Up The Project
+1. **Initialize The project** (if you haven't already):
    ```bash
    npm init -y
    ```
@@ -36,7 +36,7 @@ First, ensure your Node.js environment supports ES modules by setting up your pr
    npm install inquirer qr-image fs
    ```
 
-### 3. Write Your Code in `index.js`
+### 3. Write This Code in `index.js`
 Save your code in a file named `index.js`:
 
 ```javascript
@@ -65,13 +65,13 @@ inquirer
     });
 ```
 
-### 4. Run Your Code
-To run your code, use the following command:
+### 4. Run The Code
+To run this code, use the following command:
 ```bash
-npm start
+node index.js
 ```
 
-This will execute your `index.js` file, prompt you for a URL, generate a QR code image, and save it as `qr-img1.png` in your current directory.
+This will execute your `index.js` file, prompt you for a URL, generate a QR code image, and save it as `qr-img.png` in your current directory.
 
 ### Additional Notes
 - Ensure you have Node.js installed (preferably the latest stable version).
