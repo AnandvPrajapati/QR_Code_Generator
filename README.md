@@ -40,9 +40,10 @@ First, ensure your Node.js environment supports ES modules by setting up your pr
 Save your code in a file named `index.js`:
 
 ```javascript
-import inquirer from "inquirer";
-import qr from "qr-image";
-import fs from "fs";
+
+import inquirer from "inquirer"
+import qr from "qr-image"
+import fs from "fs"
 
 inquirer
     .prompt([
@@ -54,13 +55,15 @@ inquirer
     .then((answers) => {
         const url = answers.URL;
         var qr_svg = qr.image(url);
-        qr_svg.pipe(fs.createWriteStream('qr-img1.png'));
+        qr_svg.pipe(fs.createWriteStream('qr-img.png'));
+        fs.writeFile("URL.txt", url, (err) => {
+          if (err) throw err;
+          console.log("The file has been saved!");
+        });
     })
     .catch((error) => {
         if (error.isTtyError) {
-            console.error("Prompt couldn't be rendered in the current environment.");
         } else {
-            console.error("Something went wrong.");
         }
     });
 ```
